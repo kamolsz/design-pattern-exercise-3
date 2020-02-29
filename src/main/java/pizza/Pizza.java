@@ -2,45 +2,47 @@ package pizza;
 
 import java.util.List;
 
-public class HawaiPizza extends Pizza {
-    public HawaiPizza(double cost, List<String> components) {
-        super(PizzaType.HAWAI, cost, components);
-    }
+public abstract class Pizza {
 
-//pola i metody dla klasy bez PizzaFactory
- /*   private double cost;
+    private PizzaType pizzaType;
+    private double cost;
     private List<String> components;
 
-    public HawaiPizza(double cost, List<String> components) {
+    public Pizza(PizzaType pizzaType, double cost, List<String> components) {
+        this.pizzaType = pizzaType;
         this.cost = cost;
         this.components = components;
+    }
+
+    public PizzaType getPizzaType() {
+        return pizzaType;
     }
 
     public double getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
     public List<String> getComponents() {
         return components;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 
     public void setComponents(List<String> components) {
         this.components = components;
     }
-
     public void showPizzaInfo(){
         System.out.println(this.toString());
     }
 
     @Override
     public String toString() {
-        return "HawaiPizza{" +
-                "cost=" + cost +
+        return "Pizza{" +
+                "pizzaType=" + pizzaType +
+                ", cost=" + cost +
                 ", components=" + components +
                 '}';
-    }*/
+    }
 }

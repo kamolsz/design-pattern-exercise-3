@@ -1,10 +1,13 @@
 package pizza;
 
-import java.util.Arrays;
 import java.util.List;
 
-public class CapriciosaPizza {
-
+public class CapriciosaPizza extends Pizza{
+    public CapriciosaPizza(double cost, List<String> components) {
+        super(PizzaType.CAPRICIOSA, cost, components);
+    }
+    //pola i metody dla klasy bez PizzaFactory
+/*
     private double cost;
     private List<String> components;
 
@@ -41,5 +44,6 @@ public class CapriciosaPizza {
                 '}';
     }
 
+*/
 
 }
